@@ -43,7 +43,7 @@ class PluginBlocktypeTwitter extends SystemBlocktype {
         return array('external');
     }
 
-    public static function render_instance(BlockInstance $instance, $editing=false) {
+    public static function render_instance(BlockInstance $instance, $editing=false, $versioning=false) {
         $configdata = $instance->get('configdata');
         require_once('twitter_api/twitteroauth.php');
 		require_once('twitter_api/config.php');
@@ -243,7 +243,7 @@ private static function how_long_ago( $date ) {
     	
     
     
-    public static function instance_config_form($instance) {
+    public static function instance_config_form(BlockInstance $instance) {
         $configdata = $instance->get('configdata');
  
 
