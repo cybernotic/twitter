@@ -106,7 +106,7 @@ class PluginBlocktypeTwitter extends SystemBlocktype {
         return $result;
     }
 
-    public static function has_instance_config() {
+    public static function has_instance_config(BlockInstance $instance) {
         return true;
     }    
     
@@ -288,7 +288,7 @@ private static function how_long_ago( $date ) {
 
 
 
-    public static function default_copy_type() {
+    public static function default_copy_type(BlockInstance $instance, View $view) {
         return 'shallow';
     }
  	public static function get_instance_config_javascript(BlockInstance $instance) {
